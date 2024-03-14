@@ -69,7 +69,7 @@ $and $true $false
 
 ## Usage
 
-Ensure Dependencies: Make sure you have `runhaskell` installed.
+Ensure Dependencies: Make sure you have `ghc`, `ghci`, `runhaskell` installed.
 
 ```bash
 bash check.sh
