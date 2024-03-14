@@ -2,11 +2,11 @@
 
 ## Description
 
-Lambda expression interpreter in `Haskell` based on the fundamental concepts of lambda calculus, including **β-reduction, name collision resolution, and strategies for reducing expressions** to their normal forms. The interpreter evaluates lambda expressions, parses expressions from strings, and allows the use of macros for simpler expression writing.
+Lambda expression interpreter in `Haskell` based on the fundamental concepts of lambda calculus: **β-reduction, name collision resolution, and strategies for reducing expressions** to their normal forms. The interpreter evaluates lambda expressions, parses expressions from strings, and allows the use of macros for simpler expression writing.
 
 ## Evaluation
 
-- **Free Variable Identification (`free_vars`)**: Determines the set of variables in an expression that are not bound by a function.
+- **Free Variable Identification (`free_vars`)**: Finds variables in an expression that are not bound by a function.
 - **Redex Reduction (`reduce`)**: Applies a β-reduction to a given redex, handling potential name collisions to maintain the integrity of variable scoping.
 
 ## Reducing Expressions
@@ -46,7 +46,7 @@ The use of macros is introduced to simplify writing expressions:
 
 Code evaluation refers to the process of interpreting and executing lines of code within a programming language or environment. In the context of this project, we are extending our lambda calculus interpreter to support code evaluation, including the definition and execution of macros.
 
-We introduce a new abstract data type (ADT) called `Code` to represent lines of code. It consists of two possible constructors:
+New abstract data type (`ADT`) called `Code` to represent lines of code. It consists of two possible constructors:
 
 - `Evaluate Expr`: Represents an expression to be evaluated and its result printed.
 - `Assign String Expr`: Defines a macro by assigning a name to an expression.
@@ -65,4 +65,4 @@ $and $true $false
 λx.λy.y
 ```
 
-Code evaluation, the interpreter becomes more versatile, allowing users to define macros and execute code lines, enhancing the usability and flexibility of the system.
+Code evaluation allows our interpreter to become more versatile, enabling users to define macros and execute code lines. This enhances the usability and flexibility of the system, making it easier to write and evaluate lambda calculus expressions.
