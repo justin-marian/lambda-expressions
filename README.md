@@ -9,6 +9,11 @@ Lambda expression interpreter in `Haskell` based on the fundamental concepts of 
 - **Free Variable Identification (`free_vars`)**: Finds variables in an expression that are not bound by a function.
 - **Redex Reduction (`reduce`)**: Applies a β-reduction to a given redex, handling potential name collisions to maintain the integrity of variable scoping.
 
+## Parsing (`parse_expr`/`parse_code`)
+
+- **Expression Parsing**: Transforms a string representation of a lambda expression into its structured form as an `Expr` type.
+- **Code Parsing**: Interprets lines of code that define or evaluate expressions, supporting the `Evaluate` and `Assign` constructors, which correspond to expression evaluation and macro definition, respectively.
+
 ## Reducing Expressions
 
 In the context of this project, reduction involves applying β-reduction to redexes while considering name collisions to maintain variable scoping. The `reduce` function takes a redex in deconstructed form and returns the resulting expression after reduction.
@@ -29,12 +34,7 @@ In the context of this project, reduction involves applying β-reduction to rede
 
 **Advantages:** `Applicative` strategy can lead to more efficient reduction sequences, as it **evaluates arguments before applying functions**, potentially leading to a `avoiding unnecessary reductions`.
 
-### Parsing (`parse_expr`/`parse_code`)
-
-- **Expression Parsing**: Transforms a string representation of a lambda expression into its structured form as an `Expr` type.
-- **Code Parsing**: Interprets lines of code that define or evaluate expressions, supporting the `Evaluate` and `Assign` constructors, which correspond to expression evaluation and macro definition, respectively.
-
-### Macros
+## Macros
 
 The use of macros is introduced to simplify writing expressions:
 
@@ -42,7 +42,7 @@ The use of macros is introduced to simplify writing expressions:
 - The interpreter's context maintains a dictionary mapping macro names to their corresponding expressions.
 - The `evalMacros` function evaluates an expression with macros, performing textual substitution for each macro based on the current context.
 
-### Code Evaluation
+## Code Evaluation
 
 `Code evaluation` refers to the process of interpreting and executing lines of code within a programming language or environment. In the context of this project, we are extending our lambda calculus interpreter to support code evaluation, including the definition and execution of macros.
 
