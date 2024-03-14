@@ -69,8 +69,7 @@ $and $true $false
 
 ## Usage
 
-1. Ensure Dependencies: Make sure you have `runhaskell` installed.
-2. Set Permissions: Give execution permissions to `check.sh` and `test.hs`.
+Ensure Dependencies: Make sure you have `runhaskell` installed.
 
 ```bash
 bash check.sh
