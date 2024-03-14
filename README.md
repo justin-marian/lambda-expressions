@@ -11,7 +11,7 @@ Lambda expression interpreter in `Haskell` based on the fundamental concepts of 
 
 ### Reducing Expressions
 
-Reduction involves applying **β-reduction** to redexes while considering name collisions to maintain variable scoping. The `reduce` function takes a redex in deconstructed form and returns the resulting expression after reduce **Normal/Applicative**.
+Reduction involves applying **β-reduction** to redexes while considering name collisions to maintain variable scoping. The `reduce` function takes a redex in deconstructed form and returns the resulting expression after the reduction applied, there are 2 types: **Normal/Applicative**.
 
 #### Normal Strategy
 
