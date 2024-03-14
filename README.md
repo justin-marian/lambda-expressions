@@ -44,7 +44,7 @@ The use of macros is introduced to simplify writing expressions:
 
 ### Code Evaluation
 
-Code evaluation refers to the process of interpreting and executing lines of code within a programming language or environment. In the context of this project, we are extending our lambda calculus interpreter to support code evaluation, including the definition and execution of macros.
+`Code evaluation` refers to the process of interpreting and executing lines of code within a programming language or environment. In the context of this project, we are extending our lambda calculus interpreter to support code evaluation, including the definition and execution of macros.
 
 New abstract data type (`ADT`) called `Code` to represent lines of code. It consists of two possible constructors:
 
@@ -65,4 +65,4 @@ $and $true $false
 λx.λy.y
 ```
 
-Code evaluation allows our interpreter to become more versatile, enabling users to define macros and execute code lines. This enhances the usability and flexibility of the system, making it easier to write and evaluate lambda calculus expressions.
+`Code evaluation` let users to define macros and execute code lines, it enhances: usability and flexibility of the system, making it easier to write and evaluate lambda calculus expressions.
