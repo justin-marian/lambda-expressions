@@ -77,11 +77,11 @@ bash check.sh
 
 **Testing with provided scripts:**
 
-- To see the score: `./check.sh`
-- For detailed results: `runhaskell test.hs`
+- **See the score:** `./check.sh`
+- **Detailed results:** `runhaskell test.hs`
 
 **Testing with GHCi:**
 
-- Launch GHCi: Open your terminal and type `ghci`
-- Load All Modules: Inside GHCi, use `:l all.hs` to load all modules
-- Test Your Code: Now you can interactively test the code
+- **Launch GHCi:** Open your terminal and type `ghci`
+- **Load All Modules:** Inside GHCi, use `:l all.hs` to load all modules
+- **Test Your Code:** Now you can interactively test the code
