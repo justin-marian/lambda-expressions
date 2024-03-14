@@ -7,11 +7,21 @@ module Lambda.Sources.Expr where
         - a Macro       - $m
 --}
 
+-- Data Types
+
+-- Expr can be a Variable, a Function, an Application or a Macro
+--  Variable: a string of characters (e.g. x)
+--  Function: a string of characters and an expression (e.g. \\x.e)
+--  Application: two expressions (e.g. e1 e2)
+--  Macro: a string of characters preceded by a dollar sign (e.g. $m)
 data Expr = Variable String
           | Function String Expr
           | Application Expr Expr
           | Macro String
 
+-- Code can be an evaluation or an assignment
+-- Evaluate: an expression to be evaluated (e.g. Evaluate e)
+-- Assign: a string of characters and an expression (e.g. Assign "x" e)
 data Code = Evaluate Expr
           | Assign String Expr
     deriving (Eq, Show)

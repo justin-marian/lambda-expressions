@@ -9,9 +9,9 @@ Lambda expression interpreter in `Haskell` based on the fundamental concepts of 
 - **Free Variable Identification (`free_vars`)**: Finds variables in an expression that are not bound by a function.
 - **Redex Reduction (`reduce`)**: Applies a β-reduction to a given redex, handling potential name collisions to maintain the integrity of variable scoping.
 
-## Parsing (`parse_expr`/`parse_code`)
+## Parsing
 
-- **Expression Parsing**: Transforms a string representation of a lambda expression into its structured form as an `Expr` type.
+- **Expression Parsing**: Transforms a string representation of a lambda expression into its structured form as an `Expr` type which can be a `Variable`, `Function`, `Application`, and a `Macro`.
 - **Code Parsing**: Interprets lines of code that define or evaluate expressions, supporting the `Evaluate` and `Assign` constructors, which correspond to expression evaluation and macro definition, respectively.
 
 ## Reducing Expressions
