@@ -29,7 +29,7 @@ Reduction involves applying **β-reduction** to redexes while considering name c
 
 **Advantages:** `Applicative` strategy can lead to more efficient reduction sequences, as it **evaluates arguments before applying functions**, potentially leading to a `avoiding unnecessary reductions`.
 
-### Parsing
+## Parse
 
 - **Expression Parsing**: Transforms a string representation of a lambda expression into its structured form as an `Expr` type which can be a `Variable`, `Function`, `Application`,`Macro`.
 - **Code Parsing**: Interprets lines of code that define or evaluate expressions, supporting the `Evaluate` and `Assign` constructors, which correspond to expression evaluation and macro definition, respectively.
