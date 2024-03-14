@@ -17,7 +17,7 @@ Reduction involves applying **β-reduction** to redexes while considering name c
 
 **Selection of Redex:** `Normal` strategy prioritizes the **outermost, leftmost redex** for reduction. This means that it looks for the most superficial redex in the expression, starting from the outermost layers and moving inward.
 
-**Evaluation Order:** evaluates and reduces the expression by repeatedly applying reductions to the outermost redexes first, until no further reductions can be made. All possible reductions are explored at each step before moving on to the next one.
+**Evaluation Order:** reducting the outermost redexes first, until no further reductions can be made. All possible reductions are explored at each step before moving on.
 
 **Advantages:** `Normal` strategy ensures that the **entire expression is explored in a systematic manner**, potentially leading to a `more exhaustive reduction process`.
 
@@ -25,7 +25,7 @@ Reduction involves applying **β-reduction** to redexes while considering name c
 
 **Selection of Redex:** `Applicative` strategy focuses on the **innermost, leftmost redex** for reduction. It looks for redexes that are nested deeply within the expression and starts reducing from there.
 
-**Evaluation Order:** evaluates and reduces the expression by eagerly reducing the innermost redexes first, before moving on to outer ones. Fewer steps overall, as it prioritizes the immediate application of functions to their arguments.
+**Evaluation Order:** reducing the innermost redexes first, before moving on to outer ones. Fewer steps overall, as it prioritizes the immediate application of functions to their arguments.
 
 **Advantages:** `Applicative` strategy can lead to more efficient reduction sequences, as it **evaluates arguments before applying functions**, potentially leading to a `avoiding unnecessary reductions`.
 
