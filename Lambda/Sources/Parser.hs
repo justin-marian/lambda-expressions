@@ -33,12 +33,6 @@ instance Functor Parser where
         x <- px
         return $ f x
 
---- type declaration over ---
-
-instance Alternative Parser where
-  (Parser p1) <|> (Parser p2) = Parser $ \input -> p1 input <|> p2 input
-  empty = Parser $ \_ -> Nothing
-
 --- type declaration ---
 
 -- Parse a single character that satisfies a predicate
