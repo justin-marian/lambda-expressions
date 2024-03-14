@@ -66,3 +66,23 @@ $and $true $false
 ```
 
 `Code evaluation` let users to define macros and execute code lines, it enhances: usability and flexibility of the system, making it easier to write and evaluate lambda calculus expressions.
+
+## Usage
+
+1. Ensure Dependencies: Make sure you have `runhaskell` installed.
+2. Set Permissions: Give execution permissions to `check.sh` and `test.hs`.
+
+```bash
+bash check.sh
+```
+
+**Testing with provided scripts:**
+
+- To see the score: `./check.sh`
+- For detailed results: `runhaskell test.hs`
+
+**Testing with GHCi:**
+
+- Launch GHCi: Open your terminal and type `ghci`
+- Load All Modules: Inside GHCi, use `:l all.hs` to load all modules
+- Test Your Code: Now you can interactively test the code
